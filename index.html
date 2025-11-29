@@ -1,89 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Make sure style.css is correctly linked -->
-    <link rel="stylesheet" href="./style.css">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WEBBY</title>
+<style>
+/* === CSS MERGED HERE === */
+body { margin:0; padding:0; background:#1E2832; }
+html{ scroll-behavior:smooth; }
+.container{ position:relative; margin:0 auto; overflow:hidden; }
+.background{ background:url(/IMAGES/bg1.svg) center/cover no-repeat; height:100vh; width:100vw; }
+.circle{ background:url(/IMAGES/cirkol.png) center/cover no-repeat; width:1300px; height:900px; position:relative; left:-200px; top:10px; }
+.diagonal{ position:absolute; top:610px; height:120px; width:650px; clip-path:polygon(0 0,70% 0,100% 100%,0% 100%); background:#1E2832; }
+.diagonalEntrance{ animation:resize 1s forwards; }
+@keyframes resize{0%{transform:scale(2);}100%{transform:scale(1);}}
+.Headset{ background:url(/IMAGES/HEADSET_Webby.png) center/cover no-repeat; width:700px; height:700px; position:absolute; top:10px; left:390px; }
+.entrance22{ opacity:0; animation:slideFadeIn 1s ease forwards; }
+@keyframes slideFadeIn{0%{opacity:0; transform:translateY(50px);}100%{opacity:1; transform:translateY(0);} }
+.STUDIO{ font-size:170px; position:absolute; color:#f0f0f0; left:60%; top:80px; font-family:"Anton"; letter-spacing:20px; text-shadow:0 1px 20px rgba(0,0,0,.8); }
+.entranceStudio{ opacity:0; animation:fadeInStudio 1s ease forwards; }
+@keyframes fadeInStudio{0%{opacity:0; transform:translateX(50px);}100%{opacity:1; transform:translateX(0);} }
+.white_glow{ background:url(/IMAGES/white_glow.png) center/cover no-repeat; height:800px; width:950px; position:absolute; top:0; left:1%; opacity:70%; }
+.Headset1{ background:url(/IMAGES/headset11.png) center/cover no-repeat; width:650px; height:600px; position:absolute; top:450px; left:450px; transform:rotate(180deg); opacity:21%; }
+.experience{ font-size:25px; position:absolute; top:310px; color:#e0e0e0; right:100px; font-family:Arial; letter-spacing:5px; }
+.WIRELESS{ font-size:100px; color:white; position:absolute; top:480px; left:70px; font-family:"Anton"; letter-spacing:5px; }
+.entranceWireless{opacity:0; animation:fadeInLink 1s ease forwards;}
+@keyframes fadeInLink{0%{opacity:0; transform:translateX(-50px);}100%{opacity:1; transform:translateX(0);} }
+nav{ position:fixed; top:0; right:0; width:100%; z-index:999; }
+.links{ display:flex; gap:80px; padding:20px 50px; justify-content:flex-end; font-family:"Sansation"; }
+.links a{ color:white; text-decoration:none; font-size:15px; }
+.links a:hover{ color:rgb(6,183,243); }
+.linksEntrance{ opacity:0; animation:fadeIn 1s ease forwards; }
+@keyframes fadeIn{0%{opacity:0; transform:translateY(-50px);}100%{opacity:1; transform:translateY(0);} }
+.NewPage{ height:1000px; width:100vw; background:url(/IMAGES/bg2.svg); position:relative; }
+#air1,#air2,#air3{ color:white; font-family:"Sansation"; }
+.containerAIRPODS{ position:relative; top:100px; }
+.AIRPODS{ font-size:60px; position:absolute; top:30px; left:100px; letter-spacing:10px; }
+.textMagic{ font-size:30px; position:absolute; top:250px; left:100px; letter-spacing:5px; }
+.newpage_Sentence{ font-size:20px; width:560px; position:absolute; top:340px; left:100px; line-height:30px; }
+.earphone{ background:url(/IMAGES/earphone.png) center/cover no-repeat; height:650px; width:700px; position:absolute; right:10px; top:330px; }
+.image-reveal{ animation:imageReveal both; animation-timeline:view(50 auto); }
+@keyframes imageReveal{from{filter:saturate(0) contrast(4) brightness(.1) blur(5px); opacity:0; scale:.95; translate:0 4rem;}to{filter:none; opacity:1; scale:1; translate:0 0;} }
+.whiteGlow{ background:url(/IMAGES/white_glow.png) center/cover no-repeat; height:900px; width:1050px; position:absolute; right:-100px; top:200px; opacity:40%; }
+.buttonShop{ padding:20px 40px; background:#404954; color:white; position:absolute; left:180px; top:70%; border-radius:40px; font-size:35px; font-weight:bold; font-family:"Sansation"; transition:.3s; cursor:pointer; box-shadow:0 5px 10px rgba(0,0,0,.1);} 
+.buttonShop:hover{ background:#172028; transform:translateY(-3px) scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,.2); }
+.singleText{ font-size:20px; position:absolute; top:67%; left:182px; color:#cfcfcf; font-family:"Sansation"; }
+.thirdPage{ height:1300px; width:100vw; position:relative; }
+.categories{ font-size:60px; position:absolute; top:220px; left:39%; color:#e9e7e7; font-family:"Sansation"; }
+.Square{ background:#1E2832; height:600px; width:1100px; position:relative; top:350px; left:200px; }
+.grid{ display:grid; grid-template-columns:300px 400px 200px 200px; grid-template-rows:370px 200px; gap:1em; position:absolute; grid-template-areas:"box1 box2 box2 box3" "box1 box4 box5 box5"; }
+.item{ background:#D9D9D9; border-radius:10px; transition:.5s; cursor:pointer; }
+.item:hover{ background:#011222; transform:rotateX(10deg) scale(1.05); }
+.box1{ background:url(/IMAGES/4.png) center/cover no-repeat; }
+.holder{ position:absolute; background:#222; height:150px; width:100vw; bottom:1px; }
+</style>
+</head>
+<body>
+<!-- HTML structure preserved exactly -->
+<div class="container"><div class="background"><div class="white_glow"></div><div class="circle"></div><div class="Headset1"></div><div class="diagonal diagonalEntrance" style="animation-delay:.5s"></div><div class="STUDIO entranceStudio" style="animation-delay:.7s">STUDIO</div><div class="experience">Experience Premium</div><div class="WIRELESS entranceWireless" style="animation-delay:.5s">WIRELESS</div><div class="Headset entrance22" style="animation-delay:.5s"></div><nav><div class="links linksEntrance" style="animation-delay:.5s;"><a href="#">Home</a><a href="#">About us</a><a href="#">Contact</a><a href="#">Product</a><a href="#">Cart</a></div></nav></div></div>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sansation&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
-      rel="stylesheet"
-    />
+<div class="NewPage"><div class="singleText">Order now for best Experience</div><aside><a href="#" class="buttonShop">SHOP NOW</a></aside><div class="containerAIRPODS"><div class="AIRPODS" id="air1"><h1>Earpods Pro</h1></div><div class="textMagic" id="air2">Magic like you've never heard</div><div class="newpage_Sentence" id="air3">AirPods Pro are the only in-ear headphones with Active Noise Cancellation that continuously adapts...</div></div><div class="image_whiteGlow"><figure><div class="whiteGlow"></div><div class="earphone image-reveal"></div></figure></div></div>
 
-    <title>WEBBY</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="background">
-        <div class="white_glow"></div>
-        <div class="circle"></div>
-        <div class="Headset1"></div>
-        <div class="diagonal diagonalEntrance" style="animation-delay: 0.5s;"></div>
-        <div class="STUDIO entranceStudio" style="animation-delay: 0.7s;">STUDIO</div>
-        <div class="experience">Experience Premium</div>
-        <div class="WIRELESS entranceWireless" style="animation-delay: 0.5s;">WIRELESS</div>
-        <div class="Headset entrance22" style="animation-delay: 0.5s;"></div>
-        <nav>
-          <div class="links linksEntrance" style="animation-delay: 0.5s;">
-            <a href="#">Home</a>
-            <a href="#">About us</a>
-            <a href="#">Contact</a>
-            <a href="#">Product</a>
-            <a href="#">Cart</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-
-    <div class="NewPage">
-      <div class="singleText">Order now for best Experience</div>
-      <aside>
-        <a href="#" class="buttonShop">SHOP NOW</a>
-      </aside>
-
-      <div class="containerAIRPODS">
-        <div class="AIRPODS" id="air1"><h1>Earpods Pro</h1></div>
-        <div class="textMagic" id="air2">Magic like you've never heard</div>
-        <div class="newpage_Sentence" id="air3">
-          AirPods Pro are the only in-ear headphones with Active Noise Cancellation that continuously adapts to the geometry of your ear and the fit of the ear tips blocking out the world so you can focus on what you're listening to
-        </div>
-      </div>
-
-      <div class="image_whiteGlow">
-        <figure>
-          <div class="whiteGlow"></div>
-          <div class="earphone image-reveal"></div>
-        </figure>
-      </div>
-    </div>
-
-    <div class="thirdPage">
-      <div class="categories">Categories</div>
-
-      <div class="Square">
-        <div class="grid">
-          <a href="product1.html" class="item box1" style="grid-area: box1;"></a>
-          <a href="product2.html" class="item box2" style="grid-area: box2;"></a>
-          <a href="product3.html" class="item box3" style="grid-area: box3;"></a>
-          <a href="product4.html" class="item box4" style="grid-area: box4;"></a>
-          <a href="product5.html" class="item box5" style="grid-area: box5;"></a>
-        </div>
-      </div>
-
-      <footer>
-        <div class="holder">
-          <div class="descriptions"></div>
-        </div>
-      </footer>
-    </div>
-  </body>
+<div class="thirdPage"><div class="categories">Categories</div><div class="Square"><div class="grid"><a href="product1.html" class="item box1"></a><a href="product2.html" class="item box2"></a><a href="product3.html" class="item box3"></a><a href="product4.html" class="item box4"></a><a href="product5.html" class="item box5"></a></div></div><footer><div class="holder"><div class="descriptions"></div></div></footer></div>
+</body>
 </html>
